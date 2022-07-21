@@ -18,8 +18,8 @@ body{
 .query-field{
     flex-direction: row;
     justify-content: space-around;
-    width: 70vw;
-    height: 40vh;
+    width: 50vw;
+    height: 60vh;
     margin-top: 2%;
 }
 .Container{
@@ -32,7 +32,7 @@ body{
     width: 300px;
     border: none;
     font-size: 20px;
-    border-bottom: 1px solid rgb(0, 0, 0);
+    border-bottom: 1px solid #c41c9a;
 }
 
 #NumberOfFloor:focus-visible,#NumberOfLift:focus-visible{
@@ -40,8 +40,8 @@ body{
 }
 
 #ButtonToCreate,#ButtonToCreateLift{
-    height: 40px;
-    width: 100px;
+    height: 45px;
+    width: 90px;
     color: rgb(255, 255, 255);
     border: none;
     border-radius: 5px;
@@ -97,10 +97,9 @@ body{
 }
 
 .Line{
-    width: 70%;
+    width: 85%;
     background-color: #000;
-    height: 4px;
-    border-radius: 5px;
+    height: 8px;
 }
 .ElevatorContainer{
     display: flex;
@@ -113,8 +112,8 @@ body{
 
 
 .SingleLift{
-    width: 120px;
-    height: 200px;
+    width: 90px;
+    height: 150px;
     background-color: #8a2be2;
     position: absolute;
     bottom:20px;
@@ -150,28 +149,57 @@ body{
 }
 
 
+@media screen and (max-width:1450px) {
+    #NumberOfLift{
+        width: 200px;
+        height: fit-content;
+    }
+    #NumberOfFloor{
+        width: 200px;
+        height: fit-content;
+    }
+}
+
 
 @media screen and (max-width:1050px) {
-    .query-field{
-        flex-direction: column;
-        align-items: flex-start;
+    #NumberOfLift{
+        width: 150px;
+        height: fit-content;
+    }
+    #NumberOfFloor{
+        width: 150px;
+        height: fit-content;
+    }
+    .SingleLift{
+        width: 90px;
+        height: 150px;
     }
 }
 
-@media screen and (max-width:950px) {
-    .SingleLift{
-        width: 80px;
-        height: 120px;
-    }
-}
 
 @media screen and (max-width:850px ) {
+     #NumberOfLift{
+        width: 80px;
+        height: fit-content;
+    }
+    #NumberOfFloor{
+        width: 80px;
+        height: fit-content;
+    }
     .SingleLift{
         margin-left:10%
     }
 }
 
 @media screen and (max-width:500px ) {
+    #NumberOfLift{
+        width: 50px;
+        height: fit-content;
+    }
+    #NumberOfFloor{
+        width: 50px;
+        height: fit-content;
+    }
     .SingleLift{
         margin-left:20%
     }

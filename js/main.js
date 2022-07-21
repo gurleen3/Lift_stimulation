@@ -49,13 +49,12 @@ function MoveLift(id,FreeLift){
     {
         FreeLift.style.transform=`translateY(-${(272 *(parseInt(id)))}px)`
         FreeLift.classList.add('busy')
-        setTimeout( ()=>{FreeLift.children[0].classList.add('OpenLeftDoor'); FreeLift.children[1].classList.add('OpenRightDoor')},4500) 
+        setTimeout( ()=>{FreeLift.children[0].classList.add('OpenLeftDoor'); FreeLift.children[1].classList.add('OpenRightDoor')},4500)
+        console.log(FreeLift.children);
         setTimeout( ()=>{FreeLift.children[0].classList.remove('OpenLeftDoor'); FreeLift.children[1].classList.remove('OpenRightDoor')},8500) 
         setTimeout( ()=>{FreeLift.classList.remove('busy')},11000) 
     }
 }
-
-var flag=1;
 
 function handleclick(id){
     let Alllift=document.querySelectorAll('#Lift')
@@ -71,7 +70,7 @@ function handleclick(id){
                 MoveLift(floorOrder.shift(),FreeLift)
             }
             else{
-                console.log('No lift is Free')
+                console.log('No vacant lift')
             }
 
         }
